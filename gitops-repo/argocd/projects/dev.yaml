@@ -17,8 +17,6 @@ spec:
       server: https://kubernetes.default.svc
     - namespace: 'java-app-dev'
       server: https://kubernetes.default.svc
-    - namespace: 'react-app-dev'
-      server: https://kubernetes.default.svc
     - namespace: 'java2-app-dev'
       server: https://kubernetes.default.svc
 
