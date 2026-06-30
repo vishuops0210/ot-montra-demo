@@ -26,6 +26,10 @@ spec:
   clusterResourceWhitelist:
     - group: ''
       kind: Namespace
+    - group: argoproj.io
+      kind: ApplicationSet
+    - group: argoproj.io
+      kind: Application
 
   namespaceResourceWhitelist:
     - group: 'argoproj.io'
@@ -50,6 +54,7 @@ spec:
       kind: HorizontalPodAutoscaler
     - group: 'policy'
       kind: PodDisruptionBudget
+
 
   orphanedResources:
     warn: true
