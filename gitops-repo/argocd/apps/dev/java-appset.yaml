@@ -22,7 +22,7 @@ spec:
     spec:
       project: dev
       source:
-        repoURL: 'https://github.com/vishutyagi0210/demo-argocd.git'
+        repoURL: 'https://github.com/vishuops0210/ot-montra-demo.git'
         targetRevision: HEAD
         path: gitops-repo/helm
         helm:
