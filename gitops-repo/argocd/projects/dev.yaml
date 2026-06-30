@@ -11,14 +11,14 @@ spec:
   sourceRepos:
     - 'https://github.com/vishuops0210/ot-montra-demo.git'
 
-  destinations:
+  destinations: 
     # In-cluster mode — ArgoCD hub and workloads share the same cluster
-    - namespace: argocd
-      server: https://kubernetes.default.svc
-    - namespace: 'java-app-dev'
-      server: https://kubernetes.default.svc
-    - namespace: 'java2-app-dev'
-      server: https://kubernetes.default.svc
+    # - namespace: argocd
+    #   server: https://kubernetes.default.svc
+    # - namespace: 'java-app-dev'
+    #   server: https://kubernetes.default.svc
+    # - namespace: 'java2-app-dev'
+    #   server: https://kubernetes.default.svc
 
 
   clusterResourceWhitelist:
