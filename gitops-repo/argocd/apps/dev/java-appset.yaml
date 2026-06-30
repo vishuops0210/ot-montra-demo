@@ -7,7 +7,7 @@ spec:
   generators:
     - list:
         elements:
-          # - app: java-app
+          - app: java-app
           - app: java2-app
           # 👆 add a new line here for every new app, nothing else to touch
   template:
