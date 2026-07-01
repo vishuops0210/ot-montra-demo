@@ -7,7 +7,7 @@ global:
 
 deployment:
   image:
-    name: "docker.io/vishu0210/java-app"
+    name: "docker.io/vishu0210/java-app-dev"
     tag: "latest"
 
   resources:
