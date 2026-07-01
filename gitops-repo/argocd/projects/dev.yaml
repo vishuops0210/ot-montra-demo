@@ -12,46 +12,44 @@ spec:
     - 'https://github.com/vishuops0210/ot-montra-demo.git'
 
   destinations: 
-    # In-cluster mode — ArgoCD hub and workloads share the same cluster
-    # - namespace: argocd
-    #   server: https://kubernetes.default.svc
-    # - namespace: 'java-app-dev'
-    #   server: https://kubernetes.default.svc
-    # - namespace: 'java2-app-dev'
-    #   server: https://kubernetes.default.svc
+    In-cluster mode — ArgoCD hub and workloads share the same cluster
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+    - namespace: 'dev'
+      server: https://kubernetes.default.svc
 
 
   clusterResourceWhitelist:
     - group: ''
-      kind: Namespace
-    - group: argoproj.io
-      kind: ApplicationSet
-    - group: argoproj.io
-      kind: Application
+      kind: ''
+    # - group: argoproj.io
+    #   kind: ApplicationSet
+    # - group: argoproj.io
+    #   kind: Application
 
   namespaceResourceWhitelist:
-    - group: 'argoproj.io'
-      kind: Application
-    - group: 'apps'
-      kind: Deployment
-    - group: 'apps'
-      kind: ReplicaSet
     - group: ''
-      kind: Service
-    - group: ''
-      kind: ConfigMap
-    - group: ''
-      kind: Secret
-    - group: ''
-      kind: ServiceAccount
-    - group: 'networking.k8s.io'
-      kind: Ingress
-    - group: 'networking.k8s.io'
-      kind: NetworkPolicy
-    - group: 'autoscaling'
-      kind: HorizontalPodAutoscaler
-    - group: 'policy'
-      kind: PodDisruptionBudget
+      kind: ''
+    # - group: 'apps'
+    #   kind: Deployment
+    # - group: 'apps'
+    #   kind: ReplicaSet
+    # - group: ''
+    #   kind: Service
+    # - group: ''
+    #   kind: ConfigMap
+    # - group: ''
+    #   kind: Secret
+    # - group: ''
+    #   kind: ServiceAccount
+    # - group: 'networking.k8s.io'
+    #   kind: Ingress
+    # - group: 'networking.k8s.io'
+    #   kind: NetworkPolicy
+    # - group: 'autoscaling'
+    #   kind: HorizontalPodAutoscaler
+    # - group: 'policy'
+    #   kind: PodDisruptionBudget
 
 
   orphanedResources:

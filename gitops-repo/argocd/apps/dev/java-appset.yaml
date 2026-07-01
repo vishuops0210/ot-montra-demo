@@ -7,16 +7,17 @@ spec:
   generators:
     - list:
         elements:
+          - app: java-app
           # 👆 add a new line here for every new app, nothing else to touch
   template:
     metadata:
-      name: '{{app}}-dev'
+      name: '{{app}}'
       namespace: argocd
       finalizers:
         - resources-finalizer.argocd.argoproj.io
       labels:
         environment: dev
-        app: '{{app}}-dev'
+        app: '{{app}}'
     spec:
       project: dev
       source:
@@ -26,11 +27,11 @@ spec:
         helm:
           valueFiles:
             - values.yaml
-            - ../applications/dev/{{app}}-dev-values.yaml
+            - ../applications/dev/{{app}}-values.yaml
       destination:
         # In-cluster mode — both ArgoCD and the workloads live on the same cluster
         server: https://kubernetes.default.svc
-        namespace: '{{app}}-dev'
+        namespace: 'dev'
       syncPolicy:
         automated:
           prune: true
