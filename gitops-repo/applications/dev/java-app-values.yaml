@@ -7,8 +7,8 @@ global:
 
 deployment:
   image:
-    name: "docker.io/vishu0210/java-app-dev"
-    tag: "latest"
+    name: "asia-south2-docker.pkg.dev/montra-490412/dev-app-images/spring-boot-realworld-app"
+    tag: "72cd925"
 
   resources:
     limits:
