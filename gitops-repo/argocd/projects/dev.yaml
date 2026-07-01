@@ -12,7 +12,7 @@ spec:
     - 'https://github.com/vishuops0210/ot-montra-demo.git'
 
   destinations: 
-    In-cluster mode — ArgoCD hub and workloads share the same cluster
+    # In-cluster mode — ArgoCD hub and workloads share the same cluster
     - namespace: argocd
       server: https://kubernetes.default.svc
     - namespace: 'dev'
